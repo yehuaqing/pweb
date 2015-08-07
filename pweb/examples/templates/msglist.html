@@ -1,0 +1,25 @@
+<%
+if undefined("msglist"): msglist = []
+if undefined("rndcode"): rndcode = None
+%>
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,minimal-ui">
+<title>Pweb Demo Project</title>
+</head>
+<body>
+<h2>Msg List</h2>
+<p>Random ImgCode£º<%= rndcode%></p>
+<table>
+<%#for msg in msglist%>
+<tr>
+  <td><a href="./msg_<%=safeutf8(msg.id)%>"><%=safeutf8(msg.subject)%></a></td>
+  <td><%=safeutf8(msg.author)%></td>
+  <td><%=safeutf8(msg.indate.strftime("%Y-%m-%d %H:%M:%S"))%></td>
+</tr>
+<%#endfor%>
+</table>
+</body>
+</html>

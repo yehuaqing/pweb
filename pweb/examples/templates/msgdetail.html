@@ -1,0 +1,21 @@
+<%
+if undefined("subject"): subject = ""
+if undefined("content"): content = ""
+if undefined("author"): author = ""
+if undefined("indate"): indate = ""
+%>
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,minimal-ui">
+<title>Pweb Demo Project</title>
+</head>
+<body>
+<h2>MsgDetail</h2>
+Subject: <%=safeutf8(subject)%><br>
+Content: <%=safeutf8(content)%><br>
+Author: <%=safeutf8(author)%><br>
+Date: <%=safeutf8(indate)%>
+</body>
+</html>
